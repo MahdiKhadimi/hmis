@@ -1,5 +1,5 @@
 # hmis
-hospital website and mis
+Hospital Mnagement System and Website
 This is a php project that i is wrote by php funtional programming, everything in this project is php pure and procedural.
 In this project i tried to design a standard database and implement by mysql.
 Some feature of this project is:
