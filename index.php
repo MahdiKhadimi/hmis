@@ -1,15 +1,12 @@
 
 <?php require_once("views/web_layout/header.php"); ?>
   <?php
-  
     require_once('config/connection.php');
    // list all services 
    $condition = "";
    if(isset($_GET['q'])){
-
      if($_GET['q']!="All Services"){
-     $search = getValue($_GET['q']);
-       
+     $search = getValue($_GET['q']);    
      }else{
        $condition = "";
 
@@ -17,8 +14,7 @@
      $condition = "WHERE service_name LIKE '%$search%'";
 
    }
-   $service = mysqli_query($con,"SELECT * FROM service $condition ORDER BY service_name LIMIT 2 ");
-   
+   $service = mysqli_query($con,"SELECT * FROM service $condition ORDER BY service_name LIMIT 2 ");   
    // getting data from slide show table 
    $slide_show = mysqli_query($con,"SELECT * FROM slide_show");
    $min = mysqli_query($con,"SELECT MIN(slide_show_id) as min FROM slide_show ");
