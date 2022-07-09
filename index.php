@@ -30,9 +30,7 @@
   $advertisement = mysqli_query($con,"SELECT * FROM advertisement WHERE start_date >=$date AND end_date>=$date ORDER BY advertisement_id ASC"); 
   
   ?>
-
   <!-- start slide show  -->
-
  <div class="row">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -54,9 +52,7 @@
     </div>
     
 <?php } ?>
-
   </div>    
-  
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -70,7 +66,6 @@
 
 </div>
   <!--end slide show  -->
-
         <h2>Our Services </h2>
 
         <?php while($row_service = mysqli_fetch_assoc($service)) { ?>
@@ -111,6 +106,4 @@
     </div> 
     <br>
    <?php } ?>
-       
-		
 <?php require_once("views/web_layout/footer_website.php"); ?>
